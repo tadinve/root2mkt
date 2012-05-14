@@ -8,11 +8,17 @@ gem "devise", ">= 2.1.0.rc"
 gem "omniauth"
 gem 'omniauth-twitter'
 gem 'omniauth-linkedin'
+
 gem 'nifty-generators'
 gem "bootstrap-sass", ">= 2.0.1"
 gem 'jquery-rails'
 gem "haml", ">= 3.1.4"
 gem "slim-rails"
+
+#active admin setup
+gem 'activeadmin'
+gem 'formtastic', '< 2.2.0'
+gem "meta_search",    '>= 1.1.0.pre'
 
 gem 'sqlite3'
 gem 'pg'

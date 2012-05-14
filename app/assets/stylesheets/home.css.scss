@@ -1,3 +1,33 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin login_bg {
+	background-image: url('/assets/signin.jpg');
+	width: 235px;
+	height: 87px;
+	float: left;
+}
+
+
+.login_icon.facebook {
+	@include login_bg;
+	background-position: -12px -10px;
+}
+.login_icon.twitter {
+	@include login_bg;
+	background-position: -243px -10px;
+}
+.login_icon.google {
+	@include login_bg;
+	background-position: -12px -97px;
+}
+.login_icon.yahoo {
+	@include login_bg;
+	background-position: -243px -97px;
+}
+
+
+.login-box { background-repeat: repeat-x;
+ background-image: url("/assets/signin.jpg");
+}
