@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
       root_path
     end
     def after_sign_in_path_for(resource_or_scope)
-    	user_access_log(current_user)
+    	user_access_log(current_user) if current_user 
   		root_path
 	  end
 end
