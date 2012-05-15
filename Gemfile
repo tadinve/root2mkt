@@ -21,8 +21,9 @@ gem 'activeadmin'
 gem 'formtastic', '< 2.2.0'
 gem "meta_search",    '>= 1.1.0.pre'
 
-gem 'sqlite3'
-gem 'pg'
+
+
+
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -31,6 +32,7 @@ group :assets do
 end
 
 group :development do
+  gem 'sqlite3'
   gem "guard-bundler", ">= 0.1.3"  
   gem "guard-rails", ">= 0.0.3"    
   gem "guard-rspec", ">= 0.4.3"    
@@ -40,6 +42,10 @@ group :development do
   gem "rspec-rails", ">= 2.9.0.rc2"
   gem "factory_girl_rails", ">= 2.0.0.rc"
   gem "guard", ">= 0.6.2"
+end
+
+group :production do
+  gem 'pg'
 end
 
 group :test do
