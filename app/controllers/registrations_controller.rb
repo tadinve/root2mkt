@@ -1,6 +1,7 @@
 class RegistrationsController < Devise::RegistrationsController
   def create
     super
+    user_access_log(@user)
     session[:omniauth] = nil unless @user.new_record?
   end
 
