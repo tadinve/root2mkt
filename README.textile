@@ -1,1 +1,15 @@
+Root2Market access data
+Setup new project on local machin
+Clone this repo from github
+	> bundle install
+	> rake db:migrate
+	> rails s
+	check localhost:3000 for front end
+	and for admin panal 
+	check localhost:3000/admin
+		email => 'admin@root2market.com', :password => 'password' 
 
+Heroku development environment:
+		heroku url: http://root2market-dev.heroku.com
+		heroku url admin: http://root2market-dev.heroku.com/admin
+			email => 'admin@root2market.com', :password => 'password'
