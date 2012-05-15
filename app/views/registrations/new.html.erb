@@ -1,3 +1,4 @@
+<div class="well mtl">
 <h2>Sign up</h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
@@ -13,17 +14,10 @@
   <p><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></p>
 <% end %>
-
+  <br />
   <p><%= f.submit "Sign up" %></p>
 <% end %>
-
-
 <%= render :partial => "devise/shared/links" %>
+</div>
 
-<hr/>
-<a href="/auth/twitter">
-	<%= image_tag "twitter_64.png", :size => "64x64",:alt => "Twitter"%>
-</a>
-<a href="/auth/linkedin" >
-	<%= image_tag "linkedin_64.png", :size => "64x64", :alt => "LinkedIn" %>
-</a>
+<%= render 'layouts/social_signin'%>

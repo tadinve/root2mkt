@@ -1,8 +1,4 @@
-br
-br
-= current_user.inspect
-br
-h2 Hi there,
+h2.mtl Hi there,
 h2 Where are you looking to grow?
 .form-search
 	= form_tag "/home/search" do 
@@ -10,25 +6,6 @@ h2 Where are you looking to grow?
 		br
 		br
 		= submit_tag " use location services ",:class =>"btn btn-success"
+- if !user_signed_in? 
+	= render 'layouts/social_signin'
 
-.clearfix
-br
-br
-br
-br
-h3 Sign In using you account with:
-
-= link_to raw("<div class='login_icon facebook'></div>"), '#'
-= link_to raw("<div class='login_icon twitter'></div>"), '#'
-= link_to raw("<div class='login_icon google'></div>"), '#'
-= link_to raw("<div class='login_icon yahoo'></div>"), '#'
-
-
-/ = image_tag('signin.jpg')
-a href="/auth/twitter"
-	= image_tag "twitter_64.png", :size => "64x64",:alt => "Twitter"
-
-a href="/auth/linkedin" 
-	= image_tag "linkedin_64.png", :size => "64x64", :alt => "LinkedIn" 
-
-a href="/auth/linkedin" class="login-box"
