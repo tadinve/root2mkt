@@ -25,11 +25,11 @@ ActiveAdmin::Dashboards.build do
   #     end
   #   end
 
-  section "Recent Users" do
-      div do
-         render 'recent_users' # => this will render /app/views/admin/dashboard/_recent_posts.html.erb
-       end
-  end
+  #section "Recent Users" do
+  #    div do
+  #       render 'recent_users' # => this will render /app/views/admin/dashboard/_recent_posts.html.erb
+  #     end
+  # end
 
   
 

@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_many :authentications
-  
+  has_many :access_reports
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable, :lockable and :timeoutable
   devise :database_authenticatable, :registerable,

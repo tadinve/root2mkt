@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120509025529) do
+ActiveRecord::Schema.define(:version => 20120514231956) do
+
+  create_table "access_reports", :force => true do |t|
+    t.string   "email"
+    t.string   "provider"
+    t.datetime "access_at"
+    t.string   "access_ip"
+  end
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
