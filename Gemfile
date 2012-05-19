@@ -11,19 +11,16 @@ gem 'omniauth-linkedin'
 #gem 'omniauth-google'
 
 gem 'nifty-generators'
+gem 'spreadsheet'
 gem "bootstrap-sass", ">= 2.0.1"
 gem 'jquery-rails'
-gem "haml", ">= 3.1.4"
 gem "slim-rails"
+gem "haml", ">= 3.1.4"
 
 #active admin setup
 gem 'activeadmin'
 gem 'formtastic', '< 2.2.0'
 gem "meta_search",    '>= 1.1.0.pre'
-
-
-
-
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -57,7 +54,7 @@ group :test do
   gem "capybara", ">= 1.1.2"
   gem "database_cleaner", ">= 0.7.1"
   gem "launchy", ">= 2.0.5"
-
+  gem "mocha"
 end
 
 
@@ -73,6 +70,3 @@ case HOST_OS
     gem 'win32console', :group => :development
     gem 'rb-notifu', :group => :development
 end
-
-
-gem "mocha", :group => :test
