@@ -1,0 +1,44 @@
+/ = @coordinates[0].round(0).to_f.inspect if @coordinates
+table class="table table-striped table-bordered table-condensed"
+	th Image
+	th Name
+	th Variety
+	th&deg;C Temp Low
+	th&deg;C Temp High
+	th Lat1
+	th Lat2
+	th Elevation Low
+	th Elevation High
+	th Soil Type
+	th Soil Min
+	th Soil High
+	th Sunlight
+	th Best Season
+	th Water Min
+	th Water Max
+	th Nutritional Value
+	- unless @crops.blank?
+		- @crops.each do |c|
+			tr
+				td = image_tag("#{c.commodity_name}.jpg", :height => 150 , :width => 100)
+				td = c.commodity_name
+				td = c.variety
+				td = c.temp_low
+				td = c.temp_high
+				td = c.lat1
+				td = c.lat2
+				td = c.elevation_low
+				td = c.elevation_high
+				td = c.soil_type
+				td = c.soil_min
+				td = c.soil_high
+				td = c.sunlight
+				td = c.best_season
+				td = c.water_min
+				td = c.water_max
+				td = c.nutritional_value
+	-else
+		tr
+			td colspan=16 
+				b No Crops found!
+

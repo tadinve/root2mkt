@@ -12,6 +12,7 @@ gem 'omniauth-linkedin'
 
 gem 'nifty-generators'
 gem 'spreadsheet'
+gem "geocoder"
 gem "bootstrap-sass", ">= 2.0.1"
 gem 'jquery-rails'
 gem "slim-rails"

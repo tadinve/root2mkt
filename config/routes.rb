@@ -8,8 +8,9 @@ Cliff::Application.routes.draw do
   authenticated :user do
     root :to => 'home#index'
   end
-
   get "/home/my_list"
+  post '/home/search'
+  get '/home/search'
 
   root :to => "home#index"
   devise_for :users, :controllers => {:registrations => 'registrations'}

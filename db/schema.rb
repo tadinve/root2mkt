@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120519201030) do
+ActiveRecord::Schema.define(:version => 20120521181852) do
 
   create_table "access_reports", :force => true do |t|
     t.string   "email"
@@ -80,6 +80,8 @@ ActiveRecord::Schema.define(:version => 20120519201030) do
     t.float    "nutritional_value"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "lists", :force => true do |t|

@@ -76,6 +76,7 @@ s,m,l,n = small(5px),medium(10px),large(20px),none(0px)
 .mbs,.mvs,.mas{margin-bottom:5px !important}
 .mbm,.mvm,.mam{margin-bottom:10px !important}
 .mbl,.mvl,.mal{margin-bottom:20px !important}
+.mbxl {margin-bottom:60px !important}
 .mln,.mhn,.man{margin-left:0px !important}
 .mls,.mhs,.mas{margin-left:5px !important}
 .mlm,.mhm,.mam{margin-left:10px !important}
