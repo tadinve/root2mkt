@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120521181852) do
+ActiveRecord::Schema.define(:version => 20120522173338) do
 
   create_table "access_reports", :force => true do |t|
     t.string   "email"
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(:version => 20120521181852) do
     t.float    "lat2"
     t.integer  "elevation_low"
     t.integer  "elevation_high"
-    t.string   "soil_type"
+    t.text     "soil_type"
     t.float    "soil_min"
     t.float    "soil_high"
     t.string   "sunlight"
@@ -78,8 +78,8 @@ ActiveRecord::Schema.define(:version => 20120521181852) do
     t.integer  "water_min"
     t.integer  "water_max"
     t.float    "nutritional_value"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
     t.float    "latitude"
     t.float    "longitude"
   end
