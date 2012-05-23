@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(:version => 20120522173338) do
     t.float    "lat2"
     t.integer  "elevation_low"
     t.integer  "elevation_high"
-    t.text     "soil_type"
+    t.text     "soil_type",         :limit => 255
     t.float    "soil_min"
     t.float    "soil_high"
     t.string   "sunlight"
