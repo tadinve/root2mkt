@@ -2,10 +2,11 @@ h2.mtl Hi there,
 h2 Where are you looking to grow?
 .form-search
 	= form_tag "/home/search" do 
-		= text_field_tag "address", "",:placeholder =>"IPlocation/Address"
+		= text_field_tag "address", "",:placeholder =>"City/Address"
 		br
 		br
-		= submit_tag " use location services ",:class =>"btn btn-success"
+		= submit_tag " Search ",:class =>"btn btn-success" 
+		= link_to("Search By Map",{:controller =>"home",:action =>"search_map"},:class =>"btn btn-success")
 - if !user_signed_in? 
 	= render 'layouts/social_signin'
 

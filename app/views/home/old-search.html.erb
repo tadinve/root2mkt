@@ -1,0 +1,8 @@
+= gmaps({ "map_options" => { "type" => "SATELLITE", "center_longitude" => 180, "zoom" => 3,"auto_adjust" => true}, "markers" => { "data" => '[{ "description": "", "title": "", "lng": "5.9311119", "lat": "43.1251606", "picture": "", "width": "", "height": "" }]'}
+    })
+    = image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@coordinates[0]}%2C#{@coordinates[1]}"
+
+    = gmaps({ "map_options" => { "type" => "SATELLITE", "zoom" => 5, "auto_adjust" => true},"markers" => { "data" => '[{ "description": "This is you location", "title": "testing maps", "lng": 20.1870874, "lat": 53.8671868, "picture": "", "width": "50", "height": "100" }]'}})
+
+    [#<Geocoder::Result::Freegeoip:0x00000003805130 @data={"city"=>"Hyderabad", "region_code"=>"02", "longitude"=>"78.4744", "region_name"=>"Andhra Pradesh", "country_code"=>"IN", "latitude"=>"17.3753", "country_name"=>"India", "ip"=>"183.83.16.101", "zipcode"=>"", "metrocode"=>""}>]
+

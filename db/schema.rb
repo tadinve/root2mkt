@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120522173338) do
+ActiveRecord::Schema.define(:version => 20120523113911) do
 
   create_table "access_reports", :force => true do |t|
     t.string   "email"
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(:version => 20120522173338) do
     t.float    "lat2"
     t.integer  "elevation_low"
     t.integer  "elevation_high"
-    t.text     "soil_type"
+    t.text     "soil_type",         :limit => 255
     t.float    "soil_min"
     t.float    "soil_high"
     t.string   "sunlight"
@@ -82,6 +82,7 @@ ActiveRecord::Schema.define(:version => 20120522173338) do
     t.datetime "updated_at",                       :null => false
     t.float    "latitude"
     t.float    "longitude"
+    t.boolean  "gmaps"
   end
 
   create_table "lists", :force => true do |t|
