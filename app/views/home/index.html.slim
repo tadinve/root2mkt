@@ -6,7 +6,7 @@ h2 Where are you looking to grow?
 		br
 		br
 		= submit_tag " Search ",:class =>"btn btn-success" 
-		= link_to("Search By Map",{:controller =>"home",:action =>"search_map"},:class =>"btn btn-success")
+		/!= link_to("Search By Map",{:controller =>"home",:action =>"search_map"},:class =>"btn btn-success")
 - if !user_signed_in? 
 	= render 'layouts/social_signin'
 
