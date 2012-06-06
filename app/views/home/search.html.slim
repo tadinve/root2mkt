@@ -1,5 +1,5 @@
 / = @coordinates[0].round(0).to_f.inspect if @coordinates
-.span4.well
+.span5.well
 	h4 Latitude
 	= @latitude
 	h4 Longitude 
@@ -7,8 +7,12 @@
 	h4 Address
 	= @address
 
-.span7.thumbnail.mbxl
-	= image_tag "http://maps.google.com/maps/api/staticmap?size=550x300&sensor=false&zoom=5&markers=#{@latitude}%2C#{@longitude}"
+.span6.thumbnail.mbxl
+  .form-search
+    = form_tag "/home/search" do 
+      = text_field_tag "address", "",:placeholder =>"City/Address", :width =>"300"
+      = submit_tag " Search ",:class =>"btn btn-success" 
+	= image_tag "http://maps.google.com/maps/api/staticmap?size=600x300&sensor=false&zoom=5&markers=#{@latitude}%2C#{@longitude}"
 	
 - if @crops
 	h3 
@@ -16,7 +20,7 @@
 		= @crops.count || 0
 br	
 table class="table table-striped table-bordered table-condensed"
-	th Image
+	th Crop Image
 	th Name
 	th Variety
 	th&deg;C Temp Low
@@ -36,7 +40,7 @@ table class="table table-striped table-bordered table-condensed"
 	- unless @crops.blank?
 		- @crops.each do |c|
 			tr
-				td = image_tag("#{c.commodity_name}.jpg", :height => 150 , :width => 100)
+				td = image_tag("#{c.commodity_name}.jpg", :height => 150 , :width => 120)
 				td = c.commodity_name
 				td = c.variety
 				td = c.temp_low
